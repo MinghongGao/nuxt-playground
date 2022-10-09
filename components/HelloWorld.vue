@@ -1,5 +1,5 @@
 <template>
-  <div>Hello World - {{ currentDate }}</div>
+  <div>- Hello World - {{ currentDate }}</div>
 </template>
 <script>
 export default {
@@ -10,3 +10,8 @@ export default {
   },
 }
 </script>
+<style lang="scss" scoped>
+div {
+  color: red;
+}
+</style>
