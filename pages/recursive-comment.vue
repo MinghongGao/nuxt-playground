@@ -18,23 +18,23 @@ export default {
         {
           id: '1',
           author: 'Author 1',
-          comment: 'This is the comment',
+          comment: 'This is the comment 1',
           comments: [],
         },
         {
           id: '2',
           author: 'Author 2',
-          comment: 'This is the comment',
+          comment: 'This is the comment 2',
           comments: [
             {
               id: '3',
               author: 'Author 3',
-              comment: 'This is the comment',
+              comment: 'This is the comment 3',
               comments: [
                 {
                   id: '4',
                   author: 'Author 4',
-                  comment: 'This is the comment',
+                  comment: 'This is the comment 4',
                   comments: [],
                 },
               ],
