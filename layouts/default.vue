@@ -13,6 +13,10 @@ export default {
           label: 'Home',
           to: '/',
         },
+        {
+          label: 'Recursive comment',
+          to: '/recursive-comment',
+        },
       ],
     }
   },
