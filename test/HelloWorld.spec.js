@@ -1,9 +1,9 @@
 import { mount } from '@vue/test-utils'
-import HelloWorld from '@/components/HelloWorld.vue'
+import Navigation from '~/components/Navigation.vue'
 
-describe('HelloWorld', () => {
+describe('Navigation', () => {
   test('is a Vue instance', () => {
-    const wrapper = mount(HelloWorld)
+    const wrapper = mount(Navigation)
     expect(wrapper.vm).toBeTruthy()
   })
 })

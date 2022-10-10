@@ -1,9 +1,3 @@
 <template>
-  <HelloWorld />
+  <section class="section"><h1>This is the home page.</h1></section>
 </template>
-
-<script>
-export default {
-  name: 'IndexPage',
-}
-</script>
