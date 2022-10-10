@@ -7,7 +7,7 @@
       </div>
     </div>
     <div class="navbar-menu">
-      <ul class="navbar-start">
+      <ul class="navbar-end">
         <li class="navbar-item" v-for="route in routes" :key="route.label">
           <NuxtLink :to="route.to">{{ route.label }}</NuxtLink>
         </li>
