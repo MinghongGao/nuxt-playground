@@ -17,6 +17,10 @@ export default {
           label: 'Recursive comment',
           to: '/recursive-comment',
         },
+        {
+          label: 'Autocomplete',
+          to: '/autocomplete',
+        },
       ],
     }
   },
