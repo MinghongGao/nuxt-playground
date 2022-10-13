@@ -6,7 +6,11 @@
         class="autocomplete-textbox mr-1"
         v-model="typedContent"
       />
-      <button class="button is-small mr-1" @click="clear" v-if="typedContent">
+      <button
+        class="button is-small mr-1 clear-button"
+        @click="clear"
+        v-if="typedContent"
+      >
         Clear
       </button>
       Result: {{ resultContent }}
