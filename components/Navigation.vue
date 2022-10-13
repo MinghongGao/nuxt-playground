@@ -19,7 +19,7 @@
 export default {
   props: {
     routes: {
-      type: [Object],
+      type: Array,
     },
   },
   computed: {
