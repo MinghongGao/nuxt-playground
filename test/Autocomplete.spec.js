@@ -1,10 +1,15 @@
-const { mount } = require("@vue/test-utils")
-const Autocomplete = require("~/components/Autocomplete")
+import { mount } from "@vue/test-utils"
+import Autocomplete from '~/components/Autocomplete.vue'
 
 describe("Autocomplete component", () => {
-  const wrapper = mount(Autocomplete)
+  const wrapper = mount(Autocomplete, {
+    propsData: {
+      value: "",
+      choices: ["abc", "abcd", "abcde"]
+    }
+  })
 
-  it("is a Vue instance", () => {
+  it("is a Vue instance", async () => {
     expect(wrapper.vm).toBeTruthy()
   })
 
@@ -13,11 +18,10 @@ describe("Autocomplete component", () => {
   })
 
   it("does display clear button initially(when the user typed word larger or equal to 3 chars)", async () => {
-    await wrapper.setData({
-      typedContent: "maximum"
+    await wrapper.setProps({
+      value: "abc",
     })
-    await wrapper.vm.$nextTick()
-    expect(wrapper.find(".autocomplete-textbox").text()).toBe("maximum")
+    expect(wrapper.find(".autocomplete-textbox").element.value).toBe("abc")
     expect(wrapper.find(".clear-button").exists()).toBe(true)
   })
 })

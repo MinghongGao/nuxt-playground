@@ -1,6 +1,6 @@
 const { default: axios } = require("axios");
 
-const baseURL = "https://reqres.in/api"
+const baseURL = "https://jsonplaceholder.typicode.com"
 
 export default {
   get(api, params) {

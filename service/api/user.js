@@ -1,4 +1,4 @@
-const { default: client } = require("./client");
+import client from './client'
 
 const listUsers = async () => {
   const users = await client.get("/users")

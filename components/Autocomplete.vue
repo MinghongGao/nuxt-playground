@@ -4,7 +4,8 @@
       <input
         type="text"
         class="autocomplete-textbox mr-1"
-        v-model="typedContent"
+        :value="typedContent"
+        @input="inputChanged"
       />
       <button
         class="button is-small mr-1 clear-button"
@@ -34,23 +35,44 @@ const MINIMUM_CHARACTERS = 3
 export default {
   data() {
     return {
-      typedContent: '',
+      typedContent: this.value ?? '',
       resultContent: '',
     }
   },
   props: {
+    value: {
+      type: String,
+      optional: false,
+    },
     choices: {
-      type: [String],
+      type: Array,
+    },
+  },
+  watch: {
+    value: {
+      handler(newValue) {
+        this.typedContent = newValue
+      },
+      immediate: true,
     },
   },
   methods: {
+    inputChanged(newInput) {
+      this.typedContent = newInput.target.value
+      this.$emit('input', newInput.target.value)
+    },
     onChoiceClicked(choice) {
       this.resultContent = choice
+      this.typedContent = choice
+      this.$emit('input', choice)
     },
     clear() {
       this.typedContent = ''
       this.resultContent = ''
     },
+  },
+  created() {
+    console.log(this.value)
   },
   computed: {
     filteredChoices() {
