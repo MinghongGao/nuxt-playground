@@ -13,6 +13,6 @@ export default {
     return axios.put(`${baseURL}${api}`, { data }).then(res => res.data)
   },
   delete(api) {
-    return axios.post(`${baseURL}${api}`).then(res => res.data)
+    return axios.delete(`${baseURL}${api}`).then(res => res.data)
   }
 }
