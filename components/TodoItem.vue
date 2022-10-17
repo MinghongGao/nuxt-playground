@@ -2,11 +2,11 @@
   <div class="container is-flex is-align-items-center mb-4">
     <input
       type="checkbox"
-      class="mr-2"
+      class="mr-2 todo-item-checkbox"
       :checked="completed"
       @input="onCheckboxCompletedChanged"
     />
-    <p v-if="!editPhase" class="is-flex-grow-1">{{ title }}</p>
+    <p v-if="!editPhase" class="todo-item-title is-flex-grow-1">{{ title }}</p>
 
     <input
       type="text"
@@ -30,7 +30,7 @@
       Cancel
     </button>
     <button
-      class="button is-danger"
+      class="button is-danger todo-item-delete-button"
       v-if="!editPhase"
       @click="onDeleteButtonClicked"
     >
