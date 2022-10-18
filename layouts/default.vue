@@ -22,6 +22,7 @@ export default {
           to: '/autocomplete',
         },
         { label: 'Todo', to: '/todo' },
+        { label: 'Tab Panel', to: '/tabs-panel' },
       ],
     }
   },
