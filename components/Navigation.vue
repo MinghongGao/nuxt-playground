@@ -22,6 +22,9 @@ export default {
       type: Array,
     },
   },
+  mounted() {
+    console.log(`Date: ${new Date()}`)
+  },
   computed: {
     currentDate() {
       const currentDateTime = new Date()
