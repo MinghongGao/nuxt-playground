@@ -13,16 +13,6 @@ export default {
           label: 'Home',
           to: '/',
         },
-        {
-          label: 'Recursive comment',
-          to: '/recursive-comment',
-        },
-        {
-          label: 'Autocomplete',
-          to: '/autocomplete',
-        },
-        { label: 'Todo', to: '/todo' },
-        { label: 'Tab Panel', to: '/tabs-panel' },
       ],
     }
   },
